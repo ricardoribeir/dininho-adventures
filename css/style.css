@@ -1,0 +1,256 @@
+/* Reset CSS */ 
+
+html, body {
+    height: 100%;
+    box-sizing: border-box;
+}
+  
+body, h1, h2, h3, p, ul, dl, dd {
+    margin: 0;
+    padding: 0;
+}
+  
+ol, ul {
+    list-style: none;
+}
+  
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    background-color: #FAD121;
+    background-image: linear-gradient(180.59deg, #7E5002 25.7%, #E69405 44.23%, #FAD121 98.65%);
+    background-repeat: no-repeat;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+.header-dino {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    min-height: 272px;
+    height: 42%;
+    background: url('../image/floor.png') bottom center/contain repeat no-repeat,
+                url('../image/moutain1\ 1.png') bottom center/contain no-repeat,
+                url('../image/moutain1\ 2.png') bottom center/contain no-repeat,
+                url('../image/sky.png') top center/contain no-repeat #b5e4e3;
+}
+
+.header-dino .logo {
+    position: absolute;
+    top: 50px;
+    min-width: 250px;
+    max-width: 500px;
+    width: 70%;
+}
+
+.header-dino .dininho {
+    position: absolute;
+    top: 140px;
+    width: 30px
+}
+
+@media (min-width:1280){
+    .header-dino {
+    background: url('../image/floor.png') bottom center/1280px repeat no-repeat,
+                url('../image/moutain1\ 1.png') bottom center/contain no-repeat,
+                url('../image/moutain1\ 2.png') bottom center/contain no-repeat,
+                url('../image/sky.png') top center/contain no-repeat #b5e4e3;
+            }
+}
+
+.section-dino {
+    padding: 0 16px;
+}
+
+.title {
+    font-size: 28px;
+    line-height: 36px;
+    text-align: center;
+    color: #FCFDFC;
+    font-family: 'Bungee', sans-serif;
+    margin-top: var(--gap-medium);
+    margin-bottom: var(--gap-medium);
+}
+
+.wrapper-video-dino {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.video-dino {
+    width: 100%;
+}
+
+.wrapper-video-dino::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(5, 9, 20, 0.2);
+    transition: transform 300ms linear;
+}
+
+.wrapper-video-dino.-play::before {
+    transform: translateX(-100%);
+}
+
+.wrapper-video-dino > .play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: rgba(250, 255, 255, 0.52);
+    border-radius: 50%;
+    transition: opacity 200ms linear;
+}
+
+.wrapper-video-dino.-play > .play {
+    opacity: 0;
+}
+
+.wrapper-video-dino > .play::before {
+    content: '';
+    position: absolute;
+    display: block;
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    border-left: 25px solid #110524;
+    transform: translateX(20%);
+}
+
+.button-dino {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../image/Btn.png');
+    background-size: 100%;
+    width: 196px;
+    height: 50px;
+    color: #faffff;
+    text-decoration: none;
+    font-size: 20px;
+    margin: var(--gap-small) auto;
+}
+
+.button-dino > .jogar {
+    transform: translateY(-3px);
+}
+
+.subtitle {
+    font-family: 'Bungee', sans-serif;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 26px;
+    text-align: center;
+    color: #73263D;
+    margin-bottom: var(--gap-small);
+    }
+
+.content {
+    font-size: 16px;
+    font-style: normal;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: var(--gap-small);
+}
+
+.list {
+    color: #3D1132;
+    list-style: none;
+    font-size: 15px;
+    margin-bottom: var(--gap-small);
+}
+
+.list .item {
+    margin-bottom: var(--gap-small);
+}
+
+.separator-egg {
+    background-image: url('../image/egg.png');
+    background-size: auto 22px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 22px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--gap-small);
+}
+
+.separator-egg::before, .separator-egg::after {
+    content: '';
+    width: 46%;
+    height: 4px;
+    background: #faffff;
+    border-radius: 5px;
+}
+
+.separator-eggs {
+    background-image: url('../image/cesto-de-ovos.png');
+    background-size: 60px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--gap-small);
+}
+
+.separator-eggs::before, .separator-eggs::after {
+    content: '';
+    width: 42%;
+    height: 4px;
+    background: #faffff;
+    border-radius: 5px;
+}
+
+.footer {
+    font-size: 12px;
+    line-height: 16px;
+    color: #050914;
+    text-align: center;
+    padding-bottom: var(--gap-small);
+}
+
+.wrapper-social {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper-social .social-media {
+    margin: 10px 50px 20px 50px;
+}
+
+.social-media {
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+}
+
+.social-media[href*='twitch'] {
+    background-image: url(../image/twitch.svg);
+}
+
+.social-media[href*='twitter'] {
+    background-image: url(../image/twitter.svg);
+}
+
+.social-media[href*='discord'] {
+        background-image: url(../image/discord.svg);
+}
